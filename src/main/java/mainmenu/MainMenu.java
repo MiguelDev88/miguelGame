@@ -22,9 +22,15 @@ public class MainMenu extends JFrame{
         //set content
         MenuPanel menu = new MenuPanel();
 
-        menu.add(new FlappyButton(getWidth()/4,getHeight()/8));
+        menu.add(new FlappyButton(getWidth()/4,getHeight()/8, this));
         setContentPane(menu);
 
         pack();
+    }
+
+    public void startGame(){
+        this.dispose();
+        Game game=new Game();
+        //game.setVisible(true);
     }
 }
